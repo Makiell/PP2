@@ -49,9 +49,9 @@ import re
 
 # 7
 
-s=str(input())
-x=re.sub('(.)(_)([a-z])', r'\1\3', s)
-print(x)
+#wrong#s=str(input())
+# x=re.sub('(.)(_)([a-z])', r'\1\3', s)
+# print(x)
 
 # s=str(input())
 # temp = s.split('_')
