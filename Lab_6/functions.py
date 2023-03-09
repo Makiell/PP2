@@ -1,28 +1,26 @@
 # 1
 
-# def mult(list):
-#     result = 1
-#     for i in list:
-#         result = result * i
-    
-#     return result
+# list = [ input() for i in range(int(input()))]
 
-# list = [int(input()) for i in range(int(input()))]
+# mult = '*'.join(i for i in list)
 
-# print(mult(list))
+# print(eval(mult))
 
 
 
 # 2
 
-# str = str(input())
+str = str(input())
 
-# count=0
-# for i in str:
-#     if i.isupper():
-#         count+=1
+lower=0
+upper=0
+for i in range(len(str)):
+    if 65 <= ord(str[i]) <= 90:
+        lower+=1
+    else:
+        upper+=1
 
-# print(count)
+print(lower, upper)
 
 
 
@@ -49,7 +47,7 @@
 
 # 4
 
-# from time import sleep  ???
+# from time import sleep
 # import math
 
 # number = int(input())
@@ -64,12 +62,8 @@
 
 # 5
 
-# def isTrue(tuple):
-#     for i in tuple:
-#         if not i:
-#             return False
-#     return True
 
 # tuple = (True, True)
 
-# print(isTrue(tuple))
+# print(all(tuple))
+
