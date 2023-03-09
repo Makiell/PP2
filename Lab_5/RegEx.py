@@ -19,15 +19,15 @@ import re
 # # 3
 # import string
 
-s=str(input())
+# s=str(input())
 
-x=re.split('_', s)
-print(x)
-result=[]
-for i in range(len(x)-1):
-    if x[i].islower() and x[i+1].islower():
-        result.append(f"{x[i]}_{x[i+1]}")
-print(result)
+# x=re.split('_', s)
+# print(x)
+# result=[]
+# for i in range(len(x)-1):
+    # if x[i].islower() and x[i+1].islower():
+        # result.append(f"{x[i]}_{x[i+1]}")
+# print(result)
 
 
 # 4
@@ -81,10 +81,10 @@ print(result)
 
 # 10
 
-str = str(input())
+# str = str(input())
 
-str1 = re.sub('(.)([A-Z])', r'\1_\2', str)
-print(str1.lower())
+# str1 = re.sub('(.)([A-Z])', r'\1_\2', str)
+# print(str1.lower())
 
 
 
