@@ -96,14 +96,14 @@ import os
 
 # 8
 
-path = 'D:\Git\PP2\Lab_6\\file2.txt'
+# path = 'D:\Git\PP2\Lab_6\\file2.txt'
 
-if os.path.exists(path):
-    print("File exists")
-    print('Exists:', os.access(path, os.F_OK))
-    print('Readable:', os.access(path, os.R_OK))
-    print('Writable:', os.access(path, os.W_OK))
-    print('Executable:', os.access(path, os.X_OK))
-    os.remove('D:\Git\PP2\Lab_6\\file2.txt')
-else:
-    print("File dont exist")
+# if os.path.exists(path):
+#     print("File exists")
+#     print('Exists:', os.access(path, os.F_OK))
+#     print('Readable:', os.access(path, os.R_OK))
+#     print('Writable:', os.access(path, os.W_OK))
+#     print('Executable:', os.access(path, os.X_OK))
+#     os.remove('D:\Git\PP2\Lab_6\\file2.txt')
+# else:
+#     print("File dont exist")
