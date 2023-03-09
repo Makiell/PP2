@@ -16,12 +16,18 @@ import re
 # print(x)
 
 
-# 3
+# # 3
+# import string
 
-# s=str(input())
-# pattern="[a-z]_[a-z]{1}"
-# x=re.findall(pattern, s)
-# print(x)
+s=str(input())
+
+x=re.split('_', s)
+print(x)
+result=[]
+for i in range(len(x)-1):
+    if x[i].islower() and x[i+1].islower():
+        result.append(f"{x[i]}_{x[i+1]}")
+print(result)
 
 
 # 4
@@ -49,13 +55,12 @@ import re
 
 # 7
 
-#wrong#s=str(input())
-# x=re.sub('(.)(_)([a-z])', r'\1\3', s)
-# print(x)
-
 # s=str(input())
-# temp = s.split('_')
-# res = temp[0] + ''.join(ele.capitalize() for ele in temp[1:])
+# x=re.split('_', s)
+# res=x[0]
+# for i in range(1,len(x)):
+#     res+=x[i].capitalize()
+
 # print(res)
 
 
@@ -76,10 +81,10 @@ import re
 
 # 10
 
-# str = str(input())
+str = str(input())
 
-# str1 = re.sub('(.)([A-Z])', r'\1_\2', str)
-# print(str1.lower())
+str1 = re.sub('(.)([A-Z])', r'\1_\2', str)
+print(str1.lower())
 
 
 
@@ -91,3 +96,12 @@ import re
 #         result+=i
 
 # print(result)
+
+
+
+
+# num=str(input())
+# pattern= r"[(][0-9]{3}[)] [0-9]{3}-[0-9]{2}-[0-9]{2}"
+
+# x=re.findall(pattern, num)
+# print(x)
