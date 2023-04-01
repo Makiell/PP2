@@ -78,7 +78,7 @@ class Player(pygame.sprite.Sprite):
               if pressed_keys[K_RIGHT]:
                   self.rect.move_ip(5, 0)
 
-class coin(pygame.sprite.Group):
+class coin(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.image = pygame.image.load('coin.png')
@@ -157,7 +157,7 @@ while True:
         sys.exit()    
 
 
-    if pygame.sprite.collide_rect(P1, COIN):
+    if pygame.sprite.spritecollideany(P1, coins):
         count += 1
         COIN.rect.center = COIN.empty_space()
         
