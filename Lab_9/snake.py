@@ -26,7 +26,7 @@ size = [SIZE_BLOCK*COUNT_BLOCKS+2*SIZE_BLOCK+MARGIN*COUNT_BLOCKS,
 screen = pygame.display.set_mode(size)
 timer = pygame.time.Clock()
 courier = pygame.font.SysFont('courier', 36, 1)
-
+courier_small = pygame.font.SysFont('courier', 20, 0, 1)
 
 class SnakeBlock:
     def __init__(self, x, y):
@@ -54,6 +54,9 @@ def point_position(row, column):
 
 def start_the_game():
 
+    print([SIZE_BLOCK+10*SIZE_BLOCK + MARGIN*(10),
+                                              HEADER_MARGIN+SIZE_BLOCK+10*SIZE_BLOCK + MARGIN*(10), 
+                                              SIZE_BLOCK, SIZE_BLOCK])
     def get_random_empty_block():
         x = random.randint(0, COUNT_BLOCKS-1)
         y = random.randint(0, COUNT_BLOCKS-1)
@@ -148,6 +151,11 @@ def start_the_game():
         snake_blocks.append(new_head)
         snake_blocks.pop(0)
 
+        time = courier_small.render("Time for respawn food: " + str(point+1 -(now - spawn).seconds.real), 1, RED)
+        screen.blit(time, (20, 508))
+
+        mkll = courier_small.render("by mkll", 0, "BLACK")
+        screen.blit(mkll, (357, 508))
         pygame.display.flip()
         timer.tick(3+speed)
 
